@@ -1,0 +1,27 @@
+@import "./../../styles";
+
+.breadcrumb {
+  min-height: $site-content-padding;
+
+  &:not(:last-child) {
+    margin: 0;
+  }
+
+  a {
+    color: $carbon;
+    padding: 0 0.25rem;
+    &:hover {
+      color: $ember;
+    }
+  }
+
+  li {
+    a.is-active {
+      color: $ember;
+    }
+    & + li::before {
+      content: ""
+    }
+  }
+
+}

@@ -1,0 +1,11 @@
+@import "./../../styles";
+
+:host {
+  display: flex;
+  padding-top: $site-content-padding;
+  justify-content: left;
+
+  @include until($desktop) {
+    margin-left: 0.9375rem;
+  }
+}

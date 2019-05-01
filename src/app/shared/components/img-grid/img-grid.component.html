@@ -1,0 +1,10 @@
+<div class="columns is-multiline is-variable is-05 is-mobile">
+  <div class="column"
+       [ngClass]="{
+       'is-full-mobile is-one-third-tablet' : !gridSize,
+       'is-one-third-mobile is-one-fifth-tablet' : gridSize==='small'
+       }"
+       *ngFor="let img of images">
+    <figure class="image"><img alt="" src="{{img.thumb}}"></figure>
+  </div>
+</div>

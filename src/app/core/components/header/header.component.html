@@ -1,0 +1,28 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a class="navbar-item" [routerLink]="['']">
+      <span class="title">Robert Schurig</span>
+    </a>
+
+    <div class="navbar-burger burger"
+         (click)="mobileMenuActive = !mobileMenuActive"
+         [class.is-active]="mobileMenuActive">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="nav-menu" class="navbar-menu heading" [class.is-active]="mobileMenuActive">
+    <div class="navbar-end">
+      <a class="navbar-item" [routerLink]="['portrait']" [routerLinkActive]="['is-active']"
+         (click)="mobileMenuActive = false">portrait</a>
+      <a class="navbar-item" [routerLink]="['series']" [routerLinkActive]="['is-active']"
+         (click)="mobileMenuActive = false">series</a>
+      <a class="navbar-item" [routerLink]="['sport']" [routerLinkActive]="['is-active']"
+         (click)="mobileMenuActive = false">Sport</a>
+      <a class="navbar-item" [routerLink]="['contact']" [routerLinkActive]="['is-active']"
+         (click)="mobileMenuActive = false">Contact</a>
+    </div>
+  </div>
+</nav>

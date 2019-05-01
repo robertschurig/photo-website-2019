@@ -1,0 +1,7 @@
+@import "~node_modules/bulma/sass/utilities/mixins";
+
+@include until($desktop) {
+  .section {
+    padding-top: 0.9375rem;
+  }
+}

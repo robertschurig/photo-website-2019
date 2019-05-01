@@ -1,0 +1,42 @@
+@import '~node_modules/bulma/sass/utilities/mixins';
+@import './../../../../styles';
+
+.navbar a.navbar-item {
+  margin: 0;
+  padding: 0;
+
+  @include until($desktop) {
+    margin-left: 0.9375rem;
+  }
+}
+
+.navbar .navbar-menu {
+  margin: 0;
+
+  a.navbar-item {
+    font-size: 16px;
+    padding: 0 0.4rem;
+    align-self: flex-end;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    @include until($desktop) {
+      padding: 0.4rem 0.4rem;
+      text-align: center;
+      font-size: 18px;
+
+      &:hover,
+      &.is-active {
+        background-color: $white-bis;
+      }
+    }
+  }
+}
+
+.title {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
