@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ImageGridItem } from './img-grid.models';
+import { GridSize } from './grid-size';
 
 @Component({
   selector: 'app-img-grid',
@@ -7,12 +8,13 @@ import { ImageGridItem } from './img-grid.models';
   styleUrls: [ './img-grid.component.scss' ]
 })
 export class ImgGridComponent implements OnInit {
+  public gridSizes = GridSize;
 
   @Input()
   public images: ImageGridItem[];
 
   @Input()
-  public gridSize: string;
+  public gridSize: GridSize;
 
   constructor() {
   }

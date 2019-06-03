@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { SportComponent } from './sport.component';
-import { LatestComponent } from './latest/latest.component';
+import { DetailComponent } from './detail/detail.component';
 
 const routes: Routes = [
   {
@@ -14,8 +14,8 @@ const routes: Routes = [
         redirectTo: 'istaf-2016',
       },
       {
-        path: 'istaf-2016',
-        component: LatestComponent,
+        path: ':id',
+        component: DetailComponent,
       },
     ],
     pathMatch: 'prefix',

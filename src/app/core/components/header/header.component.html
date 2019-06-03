@@ -1,7 +1,7 @@
 <nav class="navbar">
   <div class="navbar-brand">
     <a class="navbar-item" [routerLink]="['']">
-      <span class="title">Robert Schurig</span>
+      <span class="title">{{ title }}</span>
     </a>
 
     <div class="navbar-burger burger"
@@ -15,14 +15,8 @@
 
   <div id="nav-menu" class="navbar-menu heading" [class.is-active]="mobileMenuActive">
     <div class="navbar-end">
-      <a class="navbar-item" [routerLink]="['portrait']" [routerLinkActive]="['is-active']"
-         (click)="mobileMenuActive = false">portrait</a>
-      <a class="navbar-item" [routerLink]="['series']" [routerLinkActive]="['is-active']"
-         (click)="mobileMenuActive = false">series</a>
-      <a class="navbar-item" [routerLink]="['sport']" [routerLinkActive]="['is-active']"
-         (click)="mobileMenuActive = false">Sport</a>
-      <a class="navbar-item" [routerLink]="['contact']" [routerLinkActive]="['is-active']"
-         (click)="mobileMenuActive = false">Contact</a>
+      <a class="navbar-item" *ngFor="let sectionLink of sectionLinks" [routerLink]="[sectionLink.link]" [routerLinkActive]="['is-active']"
+         (click)="mobileMenuActive = false">{{ sectionLink.text }}</a>
     </div>
   </div>
 </nav>

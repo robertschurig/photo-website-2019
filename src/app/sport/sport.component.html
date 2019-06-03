@@ -1,7 +1,10 @@
 <nav class="breadcrumb is-right is-small">
   <ul>
-    <li><a [routerLink]="['istaf-2016']" [routerLinkActive]="['is-active']">ISTAF 2016</a></li>
-    <li><a [routerLink]="['istaf-2015']" [routerLinkActive]="['is-active']">ISTAF 2015</a></li>
+    <li>
+      <a *ngFor="let link of sectionLinks"
+         [routerLink]="[link.link]"
+         [routerLinkActive]="['is-active']">{{ link.text }}</a>
+    </li>
   </ul>
 </nav>
 <router-outlet></router-outlet>

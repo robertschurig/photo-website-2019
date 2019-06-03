@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SportRoutingModule } from './sport-routing.module';
 import { SportComponent } from './sport.component';
 import { SharedModule } from '../shared/shared.module';
-import { LatestComponent } from './latest/latest.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   imports: [
@@ -12,7 +12,7 @@ import { LatestComponent } from './latest/latest.component';
     SharedModule,
     SportRoutingModule
   ],
-  declarations: [ SportComponent, LatestComponent ]
+  declarations: [ SportComponent, DetailComponent ]
 })
 export class SportModule {
 }

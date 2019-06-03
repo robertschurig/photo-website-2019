@@ -16,7 +16,7 @@ export class HomeService {
 
   public getImages(): Observable<ImageGridItem[]> {
     return this.cache ? of(this.cache)
-      : this.http.get<ImageGridItem[]>('./data/home.json')
+      : this.http.get<ImageGridItem[]>('./img/home.json')
         .pipe(
           map((data) => {
             this.cache = data;

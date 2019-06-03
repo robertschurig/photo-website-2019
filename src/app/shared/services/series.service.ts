@@ -16,7 +16,7 @@ export class SeriesService {
 
   public getColorGelImages(): Observable<ImageGridItem[]> {
     return this.colorGelImages ? of(this.colorGelImages)
-      : this.http.get<ImageGridItem[]>('./data/color-gel.json')
+      : this.http.get<ImageGridItem[]>('./img/color-gel.json')
         .pipe(
           map((data) => {
             this.colorGelImages = data;
