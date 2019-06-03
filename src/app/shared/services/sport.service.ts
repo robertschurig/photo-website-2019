@@ -14,7 +14,7 @@ export class SportService {
   }
 
   public getImages(id: string): Observable<ImageGridItem[]> {
-    return this.http.get<ImageGridItem[]>(`./img/${id}.json`)
+    return this.http.get<ImageGridItem[]>(`./assets/img/${id}.json`)
       .pipe(
         map((data) => {
           return data;

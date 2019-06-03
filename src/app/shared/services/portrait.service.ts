@@ -17,7 +17,7 @@ export class PortraitService {
 
   public getImages(): Observable<ImageGridItem[]> {
     return this.cache ? of(this.cache)
-      : this.http.get<ImageGridItem[]>('./img/portrait.json')
+      : this.http.get<ImageGridItem[]>('./assets/img/portrait.json')
         .pipe(
           map((data) => {
             this.cache = data;

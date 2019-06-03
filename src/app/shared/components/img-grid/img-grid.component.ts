@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ImageGridItem } from './img-grid.models';
 import { GridSize } from './grid-size';
 
@@ -16,10 +16,17 @@ export class ImgGridComponent implements OnInit {
   @Input()
   public gridSize: GridSize;
 
+  @Output()
+  public imageClicked = new EventEmitter();
+
   constructor() {
   }
 
   public ngOnInit(): void {
+  }
+
+  public onImageClicked(img: ImageGridItem): void {
+    this.imageClicked.emit(img);
   }
 
 }

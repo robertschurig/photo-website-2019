@@ -1,0 +1,25 @@
+.modalImage {
+  position: absolute;
+  max-width: 85%;
+  max-height: 90%;
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.9);
+  user-select: none;
+}
+
+.fadeIn {
+  animation: fadein 2.3s;
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

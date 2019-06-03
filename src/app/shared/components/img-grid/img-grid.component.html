@@ -5,7 +5,9 @@
        'is-one-third-mobile is-one-fifth-tablet' : gridSize === gridSizes.SMALL
        }"
        *ngFor="let img of images">
-    <figure class="image"><img alt="" src="{{ img.thumb }}"></figure>
+    <figure class="image"
+            (click)="onImageClicked(img)"
+    ><img alt="" src="{{ img.thumb }}"></figure>
   </div>
 </div>
 
