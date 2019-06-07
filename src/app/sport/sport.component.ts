@@ -19,20 +19,12 @@ export class SportComponent implements OnInit {
   private getSectionLinks(): SectionLink[] {
     return [
       {
-        link: 'istaf-2016',
-        text: 'ISTAF 2016',
+        link: 'athletics',
+        text: 'Athletics',
       },
       {
-        link: 'istaf-indoor-2016',
-        text: 'ISTAF INDOOR 2016',
-      },
-      {
-        link: 'istaf-2015',
-        text: 'ISTAF 2015',
-      },
-      {
-        link: 'berlin-masters-rsg-2015',
-        text: 'Berlin Masters RSG 2015',
+        link: 'gymnastics',
+        text: 'Gymnastics',
       }
     ];
   }

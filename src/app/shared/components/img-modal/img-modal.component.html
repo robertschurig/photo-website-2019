@@ -2,13 +2,15 @@
   <div class="modal-background"
        (click)="onClosed()"></div>
 
-  <img class="modalImage"
-       [ngClass]="{
-       'fadeIn': showImage,
-       'fadeOut': !showImage
-       }"
-       *ngIf="selectedImage"
-       [attr.src]="selectedImage.source" alt="">
+  <div class="modal-content">
+    <img
+        [ngClass]="{
+         'fade-in': showImage,
+         'fade-out': !showImage
+         }"
+        *ngIf="selectedImage"
+        [attr.src]="selectedImage.source" alt="">
+  </div>
 
   <button class="modal-close is-large" aria-label="close"
           (click)="onClosed()"></button>

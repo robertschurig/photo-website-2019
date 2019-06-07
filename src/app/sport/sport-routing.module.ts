@@ -11,7 +11,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'istaf-2016',
+        redirectTo: 'athletics',
       },
       {
         path: ':id',

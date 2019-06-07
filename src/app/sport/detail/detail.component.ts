@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { SportService } from '../../shared/services/sport.service';
 import { ImageGridItem } from '../../shared/components/img-grid/img-grid.models';
 import { GridSize } from '../../shared/components/img-grid/grid-size';
+import { ImageCollection } from '../../shared/models';
 
 @Component({
   selector: 'app-sport-detail',
@@ -12,7 +13,7 @@ import { GridSize } from '../../shared/components/img-grid/grid-size';
   styleUrls: [ './detail.component.scss' ]
 })
 export class DetailComponent implements OnInit {
-  public images: Observable<ImageGridItem[]>;
+  public images: Observable<ImageCollection[]>;
   public gridSize = GridSize.SMALL;
   public selectedImage: ImageGridItem;
   public showImageModal: boolean;
@@ -35,7 +36,7 @@ export class DetailComponent implements OnInit {
     this.showImageModal = true;
   }
 
-  public onImageModaleClosed() {
+  public onImageModalClosed() {
     this.selectedImage = null;
     this.showImageModal = false;
   }

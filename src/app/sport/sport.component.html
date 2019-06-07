@@ -1,8 +1,7 @@
-<nav class="breadcrumb is-right is-small">
+<nav class="breadcrumb is-right is-small has-bullet-separator">
   <ul>
-    <li>
-      <a *ngFor="let link of sectionLinks"
-         [routerLink]="[link.link]"
+    <li *ngFor="let link of sectionLinks">
+      <a [routerLink]="[link.link]"
          [routerLinkActive]="['is-active']">{{ link.text }}</a>
     </li>
   </ul>

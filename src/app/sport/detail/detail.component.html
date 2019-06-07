@@ -1,10 +1,15 @@
-<app-img-grid
-    [images]="images | async"
-    [gridSize]="gridSize"
-    (imageClicked)="onImageClicked($event)"
-></app-img-grid>
-<app-img-modal [images]="images | async"
-               [selectedImage]="selectedImage"
-               [isOpen]="showImageModal"
-               (closed)="onImageModaleClosed()"
-></app-img-modal>
+<div class="image-wrapper" *ngFor="let imageCollection of images | async">
+  <h4 class="title is-4">
+    {{ imageCollection.name + ' ' + imageCollection.date }}
+  </h4>
+  <app-img-grid
+      [images]="imageCollection.images"
+      [gridSize]="gridSize"
+      (imageClicked)="onImageClicked($event)"
+  ></app-img-grid>
+  <app-img-modal [images]="imageCollection.images"
+                 [selectedImage]="selectedImage"
+                 [isOpen]="showImageModal"
+                 (closed)="onImageModalClosed()"
+  ></app-img-modal>
+</div>
