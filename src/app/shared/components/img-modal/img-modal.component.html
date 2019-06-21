@@ -1,7 +1,5 @@
 <div class="modal" [class.is-active]="isOpen">
-  <div class="modal-background"
-       (click)="onClosed()"></div>
-
+  <div class="modal-background" (click)="onClosed()"></div>
   <div class="modal-content">
     <img
         [ngClass]="{
@@ -10,6 +8,10 @@
          }"
         *ngIf="selectedImage"
         [attr.src]="selectedImage.source" alt="">
+  </div>
+  <div class="columns nav">
+    <div class="column is-half" (click)="prevImage()"></div>
+    <div class="column is-half" (click)="nextImage()"></div>
   </div>
 
   <button class="modal-close is-large" aria-label="close"

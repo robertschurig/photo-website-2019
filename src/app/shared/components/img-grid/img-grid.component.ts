@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ImageGridItem } from './img-grid.models';
 import { GridSize } from './grid-size';
 
@@ -9,6 +9,7 @@ import { GridSize } from './grid-size';
 })
 export class ImgGridComponent implements OnInit {
   public gridSizes = GridSize;
+  public selectedImage: ImageGridItem;
 
   @Input()
   public images: ImageGridItem[];
@@ -16,8 +17,7 @@ export class ImgGridComponent implements OnInit {
   @Input()
   public gridSize: GridSize;
 
-  @Output()
-  public imageClicked = new EventEmitter();
+  private showImageModal: boolean;
 
   constructor() {
   }
@@ -25,8 +25,14 @@ export class ImgGridComponent implements OnInit {
   public ngOnInit(): void {
   }
 
-  public onImageClicked(img: ImageGridItem): void {
-    this.imageClicked.emit(img);
+  public onImageClicked(img: ImageGridItem) {
+    this.selectedImage = img;
+    this.showImageModal = true;
+  }
+
+  public onImageModalClosed() {
+    this.selectedImage = null;
+    this.showImageModal = false;
   }
 
 }

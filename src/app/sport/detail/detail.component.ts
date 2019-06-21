@@ -15,8 +15,6 @@ import { ImageCollection } from '../../shared/models';
 export class DetailComponent implements OnInit {
   public images: Observable<ImageCollection[]>;
   public gridSize = GridSize.SMALL;
-  public selectedImage: ImageGridItem;
-  public showImageModal: boolean;
 
   constructor(private sportService: SportService,
               private activeRoute: ActivatedRoute) {
@@ -29,16 +27,6 @@ export class DetailComponent implements OnInit {
 
   private replaceDashWithUnderline(value: string): string {
     return value.replace(/-/g, '_');
-  }
-
-  public onImageClicked(img: ImageGridItem) {
-    this.selectedImage = img;
-    this.showImageModal = true;
-  }
-
-  public onImageModalClosed() {
-    this.selectedImage = null;
-    this.showImageModal = false;
   }
 
 }

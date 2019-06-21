@@ -1,15 +1,9 @@
 <div class="image-wrapper" *ngFor="let imageCollection of images | async">
   <h4 class="title is-4">
-    {{ imageCollection.name + ' ' + imageCollection.date }}
+    {{ imageCollection.title }}
   </h4>
   <app-img-grid
       [images]="imageCollection.images"
       [gridSize]="gridSize"
-      (imageClicked)="onImageClicked($event)"
   ></app-img-grid>
-  <app-img-modal [images]="imageCollection.images"
-                 [selectedImage]="selectedImage"
-                 [isOpen]="showImageModal"
-                 (closed)="onImageModalClosed()"
-  ></app-img-modal>
 </div>

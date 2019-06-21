@@ -5,9 +5,18 @@
        'is-one-third-mobile is-one-fifth-tablet' : gridSize === gridSizes.SMALL
        }"
        *ngFor="let img of images">
-    <figure class="image"
-            (click)="onImageClicked(img)"
-    ><img alt="" src="{{ img.thumb }}"></figure>
+    <div class="card">
+      <div class="card-image">
+        <figure class="image" (click)="onImageClicked(img)">
+          <img alt="" src="{{ img.thumb }}">
+        </figure>
+      </div>
+    </div>
   </div>
 </div>
+<app-img-modal [images]="images"
+               [selectedImage]="selectedImage"
+               [isOpen]="showImageModal"
+               (closed)="onImageModalClosed()"
+></app-img-modal>
 

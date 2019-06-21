@@ -1,9 +1,15 @@
 .columns.is-variable {
   margin: calc(-1 * var(--columnGap));
+
   .column {
     padding: var(--columnGap);
   }
+
   &.is-05 {
     --columnGap: 0.0625rem;
   }
+}
+
+.card-image:hover {
+  cursor: pointer;
 }

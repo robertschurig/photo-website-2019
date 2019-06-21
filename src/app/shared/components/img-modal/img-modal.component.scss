@@ -6,14 +6,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 3px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.9);
 
-    > img {
-      max-width: 85%;
-      max-height: 90%;
-      user-select: none;
-    }
+  > img {
+    max-width: 85%;
+    max-height: 90%;
+    user-select: none;
+  }
 }
 
 .fade-in {
@@ -22,6 +20,15 @@
 
 .fade-out {
   opacity: 0.2;
+}
+
+.nav {
+  position: absolute;
+  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
 }
 
 @keyframes fadein {

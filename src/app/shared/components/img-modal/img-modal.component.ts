@@ -52,7 +52,7 @@ export class ImgModalComponent implements OnInit, OnChanges {
     this.closed.emit();
   }
 
-  private prevImage() {
+  public prevImage() {
     const nextIndex = this.selectedImageIndex - 1;
     this.selectedImageIndex = (nextIndex < 0) ? this.images.length - 1 : nextIndex;
 
@@ -63,7 +63,7 @@ export class ImgModalComponent implements OnInit, OnChanges {
     }, 1);
   }
 
-  private nextImage() {
+  public nextImage() {
     const nextIndex = this.selectedImageIndex + 1;
     this.selectedImageIndex = (nextIndex === this.images.length) ? 0 : nextIndex;
 
